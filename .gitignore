@@ -14,3 +14,14 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+default(0)
+default('pending'),id(),index(),nullable(),onDelete('cascade'),string('pic,string('title,text('content'),timestamps()
+default('pending')
+id()
+index()
+nullable()
+onDelete('cascade')
+string('pic
+string('title
+text('content')
+timestamps()
