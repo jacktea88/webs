@@ -18,7 +18,7 @@ class CategoryFactory extends Factory
     {
         return [
             'title' => $this->faker->realText(10),
-            'pic' => '/assets/img/blog-recent-'. rand(1,5) .'.jpg',
+            'pic' => '/assets/img/features-'. rand(1,4) .'.svg',
             'desc' => $this->faker->realText(200),
             'enabled' => rand(0,1),
             'parent_id' => rand(0,5),
