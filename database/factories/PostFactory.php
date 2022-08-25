@@ -25,7 +25,7 @@ class PostFactory extends Factory
             'sort' => rand(0,10),
             'status' => $this->faker->randomElement(['draft','published']),
             // 'featured' => $this->faker->boolean,
-            'pic' => '/assets/blog/img/blog-' .rand(1,4).'.jpg'
+            'pic' => '/assets/img/blog/blog-' .rand(1,4).'.jpg'
         ];
     }
 }
