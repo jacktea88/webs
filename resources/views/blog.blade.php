@@ -176,7 +176,12 @@
               <div class="sidebar-item categories">
                 <ul>
                     @foreach ($categories as $category)
-            <li><a href="#">{{ $category->title }}<span>(25)</span></a></li>
+            {{-- <li><a href="#">{{ $category->title }}<span>(25)</span></a></li> --}}
+            {{-- <li><a href="#">{{ $category->title }}<span>({{$counts[$loop->iteration]}})</span></a></li> --}}
+            <li><a href="#">{{ $category->title }}<span>({{$counts[$category->id]}})</span></a></li>
+            {{-- <li><a href="#">{{ $category->title }}<span>({{$category->id}})</span></a></li> --}}
+
+
         @endforeach
                   {{-- <li><a href="#">General <span>(25)</span></a></li>
                   <li><a href="#">Lifestyle <span>(12)</span></a></li>
