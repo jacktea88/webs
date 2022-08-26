@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class SiteController extends Controller
@@ -12,12 +13,14 @@ class SiteController extends Controller
         // return view('blog');
         $posts = Post::where('status','published')->orderBy('created_at','desc')->get();
         // return $posts;
-        for ($i=1; $i<5; $i++){
+        $categoryCount=Category::count();
+        // dd($count);
+        for ($i=1; $i<$categoryCount; $i++){
 
-            $counts[$i] = Post::where('status','published')->where('category_id',$i)->count();
+            $postCounts[$i] = Post::where('status','published')->where('category_id',$i)->count();
         }
         // return $counts;
-        return view('blog',compact('posts','counts'));
+        return view('blog',compact('posts','postCounts'));
 
     }
 

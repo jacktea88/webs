@@ -178,7 +178,7 @@
                     @foreach ($categories as $category)
             {{-- <li><a href="#">{{ $category->title }}<span>(25)</span></a></li> --}}
             {{-- <li><a href="#">{{ $category->title }}<span>({{$counts[$loop->iteration]}})</span></a></li> --}}
-            <li><a href="#">{{ $category->title }}<span>({{$counts[$category->id]}})</span></a></li>
+            <li><a href="#">{{ $category->title }}<span>({{$postCounts[$category->id]}})</span></a></li>
             {{-- <li><a href="#">{{ $category->title }}<span>({{$category->id}})</span></a></li> --}}
 
 
