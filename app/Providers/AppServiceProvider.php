@@ -30,7 +30,9 @@ class AppServiceProvider extends ServiceProvider
         // View::composer(['post'], function ($view) {
 
             // dd($view);
-            $categories = Category::where('enabled',true)->orderBy('sort','asc')->get();
+            // $categories = Category::where('enabled',true)->orderBy('sort','asc')->get();
+            $categories = Category::where('enabled',true)->get();
+
             // dd($categories);
             $view->with('categories',$categories);
             // dd($view);
